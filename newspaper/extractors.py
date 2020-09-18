@@ -830,7 +830,6 @@ class ContentExtractor(object):
             ancestor_node = self.parser.getParent(parent_node)
             j = 2
             while ancestor_node is not None:
-                self.update_node_count(ancestor_node, 1)
                 self.update_score(ancestor_node, upscore / (float(j)))
                 if ancestor_node not in parent_nodes:
                     parent_nodes.append(ancestor_node)
